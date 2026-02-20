@@ -1,0 +1,294 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1020" width="900" height="1020" font-family="'Courier New', monospace">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#090d14"/>
+      <stop offset="100%" stop-color="#0d1420"/>
+    </linearGradient>
+
+    <!-- Card gradients -->
+    <linearGradient id="cardBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e1f35"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+    <linearGradient id="cardGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b2218"/>
+      <stop offset="100%" stop-color="#071a12"/>
+    </linearGradient>
+    <linearGradient id="cardRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#220f0f"/>
+      <stop offset="100%" stop-color="#1a0a0a"/>
+    </linearGradient>
+    <linearGradient id="cardAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f1800"/>
+      <stop offset="100%" stop-color="#170f00"/>
+    </linearGradient>
+    <linearGradient id="cardSlate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0d1420"/>
+    </linearGradient>
+    <linearGradient id="cardPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#17102a"/>
+      <stop offset="100%" stop-color="#100c1f"/>
+    </linearGradient>
+
+    <!-- Glow filters -->
+    <filter id="glowBlue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Arrowhead markers -->
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3a4a5c"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- ── Background ───────────────────────────────────────────────── -->
+  <rect width="900" height="1020" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="#1a2535" stroke-width="0.5" opacity="0.4">
+    <line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="200" x2="900" y2="200"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="400" x2="900" y2="400"/>
+    <line x1="0" y1="500" x2="900" y2="500"/>
+    <line x1="0" y1="600" x2="900" y2="600"/>
+    <line x1="0" y1="700" x2="900" y2="700"/>
+    <line x1="0" y1="800" x2="900" y2="800"/>
+    <line x1="0" y1="900" x2="900" y2="900"/>
+    <line x1="100" y1="0" x2="100" y2="1020"/>
+    <line x1="200" y1="0" x2="200" y2="1020"/>
+    <line x1="300" y1="0" x2="300" y2="1020"/>
+    <line x1="400" y1="0" x2="400" y2="1020"/>
+    <line x1="500" y1="0" x2="500" y2="1020"/>
+    <line x1="600" y1="0" x2="600" y2="1020"/>
+    <line x1="700" y1="0" x2="700" y2="1020"/>
+    <line x1="800" y1="0" x2="800" y2="1020"/>
+  </g>
+
+  <!-- ── Title ────────────────────────────────────────────────────── -->
+  <text x="450" y="38" text-anchor="middle" font-size="11" letter-spacing="6" fill="#3b82f6" opacity="0.7">RECEIPT FORGERY DETECTION</text>
+  <text x="450" y="64" text-anchor="middle" font-size="22" letter-spacing="2" fill="#e2e8f0" font-weight="bold">THREE-JUDGE GEMINI ENSEMBLE</text>
+  <line x1="120" y1="74" x2="780" y2="74" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- STEP 1 — Dataset -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+
+  <!-- dataset/real/ box -->
+  <rect x="60" y="100" width="168" height="56" rx="6" fill="url(#cardGreen)" stroke="#166534" stroke-width="1" filter="url(#softShadow)"/>
+  <text x="144" y="122" text-anchor="middle" font-size="9" letter-spacing="3" fill="#4ade80" opacity="0.7">FOLDER</text>
+  <text x="144" y="142" text-anchor="middle" font-size="13" fill="#86efac" font-weight="bold">dataset/real/</text>
+
+  <!-- dataset/fake/ box -->
+  <rect x="672" y="100" width="168" height="56" rx="6" fill="url(#cardRed)" stroke="#991b1b" stroke-width="1" filter="url(#softShadow)"/>
+  <text x="756" y="122" text-anchor="middle" font-size="9" letter-spacing="3" fill="#f87171" opacity="0.7">FOLDER</text>
+  <text x="756" y="142" text-anchor="middle" font-size="13" fill="#fca5a5" font-weight="bold">dataset/fake/</text>
+
+  <!-- discover_dataset() -->
+  <rect x="300" y="93" width="300" height="70" rx="8" fill="url(#cardBlue)" stroke="#1e40af" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="450" y="115" text-anchor="middle" font-size="9" letter-spacing="3" fill="#93c5fd" opacity="0.7">DISCOVERY</text>
+  <text x="450" y="137" text-anchor="middle" font-size="14" fill="#bfdbfe" font-weight="bold">discover_dataset()</text>
+  <text x="450" y="154" text-anchor="middle" font-size="10" fill="#64748b">walks real/ + fake/ · infers ground truth</text>
+
+  <!-- arrows from folders to discover -->
+  <line x1="228" y1="128" x2="295" y2="128" stroke="#3a4a5c" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="672" y1="128" x2="605" y2="128" stroke="#3a4a5c" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- STEP 2 — Rate Limiter -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+
+  <!-- arrow down from discover -->
+  <line x1="450" y1="163" x2="450" y2="193" stroke="#3a4a5c" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <rect x="270" y="193" width="360" height="74" rx="8" fill="url(#cardAmber)" stroke="#92400e" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="450" y="215" text-anchor="middle" font-size="9" letter-spacing="3" fill="#fcd34d" opacity="0.7">RATE LIMITER</text>
+  <text x="450" y="237" text-anchor="middle" font-size="14" fill="#fde68a" font-weight="bold">RateLimiter (singleton)</text>
+  <text x="450" y="255" text-anchor="middle" font-size="10" fill="#78716c">12 RPM · 4s min gap · sliding window · 5× retry</text>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- STEP 3 — analyse_receipt -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+
+  <line x1="450" y1="267" x2="450" y2="297" stroke="#3a4a5c" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <rect x="290" y="297" width="320" height="66" rx="8" fill="url(#cardBlue)" stroke="#1e3a8a" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="450" y="319" text-anchor="middle" font-size="9" letter-spacing="3" fill="#93c5fd" opacity="0.7">PER-IMAGE</text>
+  <text x="450" y="341" text-anchor="middle" font-size="14" fill="#bfdbfe" font-weight="bold">analyse_receipt()</text>
+  <text x="450" y="355" text-anchor="middle" font-size="10" fill="#64748b">load image · encode base64 · call 3 judges</text>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- STEP 4 — Three Judges -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+
+  <!-- fan-out arrows -->
+  <line x1="450" y1="363" x2="450" y2="383" stroke="#3a4a5c" stroke-width="1.5"/>
+  <line x1="450" y1="383" x2="144" y2="383" stroke="#3a4a5c" stroke-width="1.5"/>
+  <line x1="450" y1="383" x2="756" y2="383" stroke="#3a4a5c" stroke-width="1.5"/>
+  <line x1="144" y1="383" x2="144" y2="400" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <line x1="450" y1="383" x2="450" y2="400" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <line x1="756" y1="383" x2="756" y2="400" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrowAmber)"/>
+
+  <!-- Judge 1 — Visual -->
+  <rect x="34" y="400" width="220" height="128" rx="8" fill="url(#cardBlue)" stroke="#1d4ed8" stroke-width="1.5" filter="url(#softShadow)"/>
+  <rect x="34" y="400" width="220" height="28" rx="8" fill="#1e3a8a" opacity="0.6"/>
+  <rect x="34" y="420" width="220" height="8" fill="#1e3a8a" opacity="0.6"/>
+  <text x="144" y="419" text-anchor="middle" font-size="10" letter-spacing="2" fill="#93c5fd" font-weight="bold">JUDGE 1 · VISUAL</text>
+  <text x="144" y="446" text-anchor="middle" font-size="12" fill="#bfdbfe" font-weight="bold">Visual Anomaly</text>
+  <text x="144" y="462" text-anchor="middle" font-size="12" fill="#bfdbfe" font-weight="bold">Inspector</text>
+  <text x="144" y="484" text-anchor="middle" font-size="10" fill="#64748b">temp = 0.1</text>
+  <text x="144" y="500" text-anchor="middle" font-size="9" fill="#475569">pixel artifacts · font rendering</text>
+  <text x="144" y="515" text-anchor="middle" font-size="9" fill="#475569">logo degradation · compression</text>
+
+  <!-- Judge 2 — Semantic -->
+  <rect x="340" y="400" width="220" height="128" rx="8" fill="url(#cardGreen)" stroke="#166534" stroke-width="1.5" filter="url(#softShadow)"/>
+  <rect x="340" y="400" width="220" height="28" rx="8" fill="#14532d" opacity="0.6"/>
+  <rect x="340" y="420" width="220" height="8" fill="#14532d" opacity="0.6"/>
+  <text x="450" y="419" text-anchor="middle" font-size="10" letter-spacing="2" fill="#86efac" font-weight="bold">JUDGE 2 · SEMANTIC</text>
+  <text x="450" y="446" text-anchor="middle" font-size="12" fill="#bbf7d0" font-weight="bold">Semantic Logic</text>
+  <text x="450" y="462" text-anchor="middle" font-size="12" fill="#bbf7d0" font-weight="bold">Auditor</text>
+  <text x="450" y="484" text-anchor="middle" font-size="10" fill="#64748b">temp = 0.5</text>
+  <text x="450" y="500" text-anchor="middle" font-size="9" fill="#475569">arithmetic · tax rates · dates</text>
+  <text x="450" y="515" text-anchor="middle" font-size="9" fill="#475569">merchant coherence · item logic</text>
+
+  <!-- Judge 3 — Layout -->
+  <rect x="646" y="400" width="220" height="128" rx="8" fill="url(#cardAmber)" stroke="#92400e" stroke-width="1.5" filter="url(#softShadow)"/>
+  <rect x="646" y="400" width="220" height="28" rx="8" fill="#78350f" opacity="0.6"/>
+  <rect x="646" y="420" width="220" height="8" fill="#78350f" opacity="0.6"/>
+  <text x="756" y="419" text-anchor="middle" font-size="10" letter-spacing="2" fill="#fcd34d" font-weight="bold">JUDGE 3 · LAYOUT</text>
+  <text x="756" y="446" text-anchor="middle" font-size="12" fill="#fde68a" font-weight="bold">Layout Forensics</text>
+  <text x="756" y="462" text-anchor="middle" font-size="12" fill="#fde68a" font-weight="bold">Analyst</text>
+  <text x="756" y="484" text-anchor="middle" font-size="10" fill="#64748b">temp = 0.9</text>
+  <text x="756" y="500" text-anchor="middle" font-size="9" fill="#475569">column alignment · line spacing</text>
+  <text x="756" y="515" text-anchor="middle" font-size="9" fill="#475569">whitespace · POS template drift</text>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- STEP 5 — JudgeResponse outputs -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+
+  <!-- output chips under each judge -->
+  <line x1="144" y1="528" x2="144" y2="556" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <line x1="450" y1="528" x2="450" y2="556" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <line x1="756" y1="528" x2="756" y2="556" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrowAmber)"/>
+
+  <!-- response schema chip — shown once per judge -->
+  <rect x="54" y="556" width="180" height="76" rx="6" fill="#0e1b2e" stroke="#1e3a8a" stroke-width="1" opacity="0.95"/>
+  <text x="144" y="574" text-anchor="middle" font-size="8" letter-spacing="2" fill="#60a5fa" opacity="0.8">JUDGE RESPONSE</text>
+  <text x="144" y="591" text-anchor="middle" font-size="9" fill="#94a3b8">label  ·  confidence</text>
+  <text x="144" y="606" text-anchor="middle" font-size="9" fill="#94a3b8">reason  (1 sentence)</text>
+  <text x="144" y="621" text-anchor="middle" font-size="9" fill="#94a3b8">evidence_regions  [ ]</text>
+
+  <rect x="360" y="556" width="180" height="76" rx="6" fill="#0b1f14" stroke="#166534" stroke-width="1" opacity="0.95"/>
+  <text x="450" y="574" text-anchor="middle" font-size="8" letter-spacing="2" fill="#4ade80" opacity="0.8">JUDGE RESPONSE</text>
+  <text x="450" y="591" text-anchor="middle" font-size="9" fill="#94a3b8">label  ·  confidence</text>
+  <text x="450" y="606" text-anchor="middle" font-size="9" fill="#94a3b8">reason  (1 sentence)</text>
+  <text x="450" y="621" text-anchor="middle" font-size="9" fill="#94a3b8">evidence_regions  [ ]</text>
+
+  <rect x="666" y="556" width="180" height="76" rx="6" fill="#1a1000" stroke="#92400e" stroke-width="1" opacity="0.95"/>
+  <text x="756" y="574" text-anchor="middle" font-size="8" letter-spacing="2" fill="#fbbf24" opacity="0.8">JUDGE RESPONSE</text>
+  <text x="756" y="591" text-anchor="middle" font-size="9" fill="#94a3b8">label  ·  confidence</text>
+  <text x="756" y="606" text-anchor="middle" font-size="9" fill="#94a3b8">reason  (1 sentence)</text>
+  <text x="756" y="621" text-anchor="middle" font-size="9" fill="#94a3b8">evidence_regions  [ ]</text>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- STEP 6 — aggregate_votes -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+
+  <!-- fan-in arrows -->
+  <line x1="144" y1="632" x2="144" y2="656" stroke="#3a4a5c" stroke-width="1.5"/>
+  <line x1="450" y1="632" x2="450" y2="656" stroke="#3a4a5c" stroke-width="1.5"/>
+  <line x1="756" y1="632" x2="756" y2="656" stroke="#3a4a5c" stroke-width="1.5"/>
+  <line x1="144" y1="656" x2="450" y2="656" stroke="#3a4a5c" stroke-width="1.5"/>
+  <line x1="756" y1="656" x2="450" y2="656" stroke="#3a4a5c" stroke-width="1.5"/>
+  <line x1="450" y1="656" x2="450" y2="673" stroke="#3a4a5c" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <rect x="280" y="673" width="340" height="78" rx="8" fill="url(#cardPurple)" stroke="#4c1d95" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="450" y="695" text-anchor="middle" font-size="9" letter-spacing="3" fill="#c4b5fd" opacity="0.7">VOTING</text>
+  <text x="450" y="717" text-anchor="middle" font-size="14" fill="#ddd6fe" font-weight="bold">aggregate_votes()</text>
+  <text x="450" y="737" text-anchor="middle" font-size="10" fill="#64748b">≥ 2 × REAL → REAL  ·  ≥ 2 × FAKE → FAKE</text>
+  <!-- rule 2 -->
+  <text x="450" y="751" text-anchor="middle" font-size="10" fill="#64748b">split / 2+ UNCERTAIN → UNCERTAIN</text>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- STEP 7 — FinalVerdict -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+
+  <line x1="450" y1="751" x2="450" y2="781" stroke="#3a4a5c" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <rect x="300" y="781" width="300" height="66" rx="8" fill="url(#cardSlate)" stroke="#334155" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="450" y="803" text-anchor="middle" font-size="9" letter-spacing="3" fill="#94a3b8" opacity="0.7">FINAL VERDICT</text>
+  <text x="450" y="824" text-anchor="middle" font-size="13" fill="#e2e8f0" font-weight="bold">label  ·  vote_tally</text>
+  <text x="450" y="840" text-anchor="middle" font-size="10" fill="#475569">{ "REAL": n, "FAKE": n, "UNCERTAIN": n }</text>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- STEP 8 — save_results: two outputs -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+
+  <line x1="450" y1="847" x2="450" y2="877" stroke="#3a4a5c" stroke-width="1.5"/>
+  <line x1="450" y1="877" x2="270" y2="877" stroke="#3a4a5c" stroke-width="1.5"/>
+  <line x1="450" y1="877" x2="630" y2="877" stroke="#3a4a5c" stroke-width="1.5"/>
+  <line x1="270" y1="877" x2="270" y2="894" stroke="#3a4a5c" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="630" y1="877" x2="630" y2="894" stroke="#3a4a5c" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <!-- predictions.json -->
+  <rect x="130" y="894" width="280" height="88" rx="8" fill="#0d1f14" stroke="#166534" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="270" y="916" text-anchor="middle" font-size="9" letter-spacing="3" fill="#4ade80" opacity="0.7">OUTPUT</text>
+  <text x="270" y="936" text-anchor="middle" font-size="13" fill="#86efac" font-weight="bold">predictions.json</text>
+  <text x="270" y="954" text-anchor="middle" font-size="9" fill="#475569">verdict: label + vote_tally</text>
+  <text x="270" y="969" text-anchor="middle" font-size="9" fill="#475569">judge_details: label, confidence,</text>
+  <text x="270" y="983" text-anchor="middle" font-size="9" fill="#475569">reason, evidence_regions</text>
+
+  <!-- predictions.csv -->
+  <rect x="490" y="894" width="280" height="88" rx="8" fill="#1a1000" stroke="#92400e" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="630" y="916" text-anchor="middle" font-size="9" letter-spacing="3" fill="#fbbf24" opacity="0.7">OUTPUT</text>
+  <text x="630" y="936" text-anchor="middle" font-size="13" fill="#fde68a" font-weight="bold">predictions.csv</text>
+  <text x="630" y="954" text-anchor="middle" font-size="9" fill="#475569">votes_real / fake / uncertain</text>
+  <text x="630" y="969" text-anchor="middle" font-size="9" fill="#475569">per-judge: label, confidence,</text>
+  <text x="630" y="983" text-anchor="middle" font-size="9" fill="#475569">reason, evidence_regions</text>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- Step labels on the left margin -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <g font-size="9" letter-spacing="1" fill="#1e3a5f" text-anchor="middle">
+    <text x="22" y="132" transform="rotate(-90,22,132)">DATASET</text>
+    <text x="22" y="235" transform="rotate(-90,22,235)">LIMITER</text>
+    <text x="22" y="335" transform="rotate(-90,22,335)">LOADER</text>
+    <text x="22" y="466" transform="rotate(-90,22,466)">JUDGES</text>
+    <text x="22" y="596" transform="rotate(-90,22,596)">RESPONSE</text>
+    <text x="22" y="716" transform="rotate(-90,22,716)">VOTE</text>
+    <text x="22" y="820" transform="rotate(-90,22,820)">VERDICT</text>
+    <text x="22" y="940" transform="rotate(-90,22,940)">PERSIST</text>
+  </g>
+
+  <!-- Tick marks for step labels -->
+  <g stroke="#1e3a5f" stroke-width="1">
+    <line x1="34" y1="100" x2="34" y2="163"/>
+    <line x1="34" y1="193" x2="34" y2="267"/>
+    <line x1="34" y1="297" x2="34" y2="363"/>
+    <line x1="34" y1="400" x2="34" y2="528"/>
+    <line x1="34" y1="556" x2="34" y2="632"/>
+    <line x1="34" y1="673" x2="34" y2="751"/>
+    <line x1="34" y1="781" x2="34" y2="847"/>
+    <line x1="34" y1="877" x2="34" y2="982"/>
+  </g>
+
+</svg>

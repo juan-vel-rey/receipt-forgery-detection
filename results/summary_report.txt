@@ -1,0 +1,27 @@
+==============================================================
+  FIND IT AGAIN RECEIPT DATASET — ANALYSIS SUMMARY
+  Generated : 2026-02-19 18:11
+==============================================================
+
+  DATASET
+    REAL receipts       : 825
+    FAKE receipts       : 162
+    Total               : 987
+
+  MODEL PREDICTIONS
+    Total predicted     : 20
+    UNCERTAIN outputs   : 4 (20.0%)
+    Decided accuracy    : 75.00%
+    Unanimous votes     : 6 (30.0%)
+
+  OUTPUTS SAVED
+    results/predictions.csv
+    results/predictions.json
+    results/eda_class_distribution.png
+    results/eda_receipt_totals.png
+    results/eda_image_dimensions.png
+    results/eval_confusion_matrix.png
+    results/eval_per_judge_confidence.png
+    results/eval_disagreement_analysis.png
+
+==============================================================

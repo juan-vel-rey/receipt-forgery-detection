@@ -1,0 +1,1456 @@
+2026-02-17 22:40:00,286 [INFO] Found 10 images in data/real
+2026-02-17 22:40:00,287 [INFO] Found 10 images in data/fake
+2026-02-17 22:40:00,287 [INFO] Total images discovered: 20
+2026-02-17 22:40:00,287 [INFO] Processing limited to first 1 images.
+2026-02-17 22:40:00,287 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-17 22:40:07,631 [ERROR] ✗ Failed on data/fake/X51005361946.png: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2026-02-17 22:40:07,634 [INFO] JSON results saved → results/predictions.json
+2026-02-17 22:40:07,636 [INFO] CSV results saved  → results/predictions.csv
+2026-02-17 22:40:07,679 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<call_judge() done, defined at /Users/juan/Documents/cs_projects/receipt-forgery/receipt_forgery_detector.py:247> exception=InvalidArgument('API key not valid. Please pass a valid API key.')>
+Traceback (most recent call last):
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/receipt_forgery_detector.py", line 269, in call_judge
+    response = await loop.run_in_executor(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/receipt_forgery_detector.py", line 271, in <lambda>
+    lambda: model.generate_content([image_part, prompt_text]),
+            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/generativeai/generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+        request,
+        **request_options,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 835, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2026-02-17 22:40:07,684 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<call_judge() done, defined at /Users/juan/Documents/cs_projects/receipt-forgery/receipt_forgery_detector.py:247> exception=InvalidArgument('API key not valid. Please pass a valid API key.')>
+Traceback (most recent call last):
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/receipt_forgery_detector.py", line 269, in call_judge
+    response = await loop.run_in_executor(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/receipt_forgery_detector.py", line 271, in <lambda>
+    lambda: model.generate_content([image_part, prompt_text]),
+            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/generativeai/generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+        request,
+        **request_options,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 835, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2026-02-17 22:40:42,405 [INFO] Found 10 images in data/real
+2026-02-17 22:40:42,405 [INFO] Found 10 images in data/fake
+2026-02-17 22:40:42,405 [INFO] Total images discovered: 20
+2026-02-17 22:40:42,405 [INFO] Processing limited to first 1 images.
+2026-02-17 22:40:42,405 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-17 22:40:48,118 [ERROR] ✗ Failed on data/fake/X51005361946.png: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 9.842328009s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 9
+}
+]
+2026-02-17 22:40:48,120 [INFO] JSON results saved → results/predictions.json
+2026-02-17 22:40:48,121 [INFO] CSV results saved  → results/predictions.csv
+2026-02-17 22:40:48,206 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<call_judge() done, defined at /Users/juan/Documents/cs_projects/receipt-forgery/receipt_forgery_detector.py:247> exception=ResourceExhausted('You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 10.078258001s.')>
+Traceback (most recent call last):
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/receipt_forgery_detector.py", line 269, in call_judge
+    response = await loop.run_in_executor(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/receipt_forgery_detector.py", line 271, in <lambda>
+    lambda: model.generate_content([image_part, prompt_text]),
+            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/generativeai/generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+        request,
+        **request_options,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 835, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 10.078258001s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 10
+}
+]
+2026-02-17 22:45:17,616 [INFO] Found 10 images in data/real
+2026-02-17 22:45:17,617 [INFO] Found 10 images in data/fake
+2026-02-17 22:45:17,617 [INFO] Total images discovered: 20
+2026-02-17 22:45:17,617 [INFO] Processing limited to first 1 images.
+2026-02-17 22:45:17,617 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-17 22:45:44,863 [ERROR] ✗ Failed on data/fake/X51005361946.png: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 13.27115874s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 13
+}
+]
+2026-02-17 22:45:44,868 [INFO] JSON results saved → results/predictions.json
+2026-02-17 22:45:44,869 [INFO] CSV results saved  → results/predictions.csv
+2026-02-17 22:45:46,139 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<call_judge() done, defined at /Users/juan/Documents/cs_projects/receipt-forgery/receipt_forgery_detector.py:247> exception=ResourceExhausted('You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 13.999330352s.')>
+Traceback (most recent call last):
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/receipt_forgery_detector.py", line 269, in call_judge
+    response = await loop.run_in_executor(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/receipt_forgery_detector.py", line 271, in <lambda>
+    lambda: model.generate_content([image_part, prompt_text]),
+            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/generativeai/generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+        request,
+        **request_options,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 835, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/juan/Documents/cs_projects/receipt-forgery/venv/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 77, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 13.999330352s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 13
+}
+]
+2026-02-17 22:48:39,045 [INFO] Found 10 images in data/real
+2026-02-17 22:48:39,045 [INFO] Found 10 images in data/fake
+2026-02-17 22:48:39,046 [INFO] Total images discovered: 20
+2026-02-17 22:48:39,046 [INFO] Processing limited to first 1 images.
+2026-02-17 22:48:39,046 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-17 22:48:39,070 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 22:48:52,669 [ERROR] ✗ Failed on data/fake/X51005361946.png: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 5.329977627s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 5
+}
+]
+2026-02-17 22:48:52,673 [INFO] JSON results saved → results/predictions.json
+2026-02-17 22:48:52,674 [INFO] CSV results saved  → results/predictions.csv
+2026-02-17 22:49:33,026 [INFO] Found 10 images in data/real
+2026-02-17 22:49:33,026 [INFO] Found 10 images in data/fake
+2026-02-17 22:49:33,026 [INFO] Total images discovered: 20
+2026-02-17 22:49:33,026 [INFO] Processing limited to first 1 images.
+2026-02-17 22:49:33,026 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-17 22:49:33,050 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 22:49:37,578 [ERROR] ✗ Failed on data/fake/X51005361946.png: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 20.385665235s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 20
+}
+]
+2026-02-17 22:49:37,581 [INFO] JSON results saved → results/predictions.json
+2026-02-17 22:49:37,582 [INFO] CSV results saved  → results/predictions.csv
+2026-02-17 22:51:27,845 [INFO] Found 10 images in data/real
+2026-02-17 22:51:27,845 [INFO] Found 10 images in data/fake
+2026-02-17 22:51:27,845 [INFO] Total images discovered: 20
+2026-02-17 22:51:27,845 [INFO] Processing limited to first 1 images.
+2026-02-17 22:51:27,845 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-17 22:51:27,866 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 22:51:35,636 [ERROR] ✗ Failed on data/fake/X51005361946.png: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 22.322524734s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 22
+}
+]
+2026-02-17 22:51:35,640 [INFO] JSON results saved → results/predictions.json
+2026-02-17 22:51:35,641 [INFO] CSV results saved  → results/predictions.csv
+2026-02-17 22:59:19,071 [INFO] Found 10 images in data/real
+2026-02-17 22:59:19,071 [INFO] Found 10 images in data/fake
+2026-02-17 22:59:19,071 [INFO] Total images discovered: 20
+2026-02-17 22:59:19,071 [INFO] Processing limited to first 1 images.
+2026-02-17 22:59:19,071 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-17 22:59:19,072 [INFO] Rate limiter: 12 RPM max · 4.0s min gap · 5 retries · base back-off 10.0s
+2026-02-17 22:59:19,095 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 22:59:29,703 [WARNING] [VISUAL] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-17 22:59:39,706 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 50.5s…
+2026-02-17 23:00:32,509 [WARNING] [VISUAL] Rate-limit hit on attempt 2. Back-off 20s before retry…
+2026-02-17 23:00:52,515 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 40.5s…
+2026-02-17 23:01:35,734 [WARNING] [VISUAL] Rate-limit hit on attempt 3. Back-off 40s before retry…
+2026-02-17 23:07:41,614 [INFO] Found 10 images in data/real
+2026-02-17 23:07:41,614 [INFO] Found 10 images in data/fake
+2026-02-17 23:07:41,614 [INFO] Total images discovered: 20
+2026-02-17 23:07:41,615 [INFO] Processing limited to first 1 images.
+2026-02-17 23:07:41,615 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-17 23:07:41,615 [INFO] Rate limiter: 8 RPM max · 10.0s min gap · 5 retries · base back-off 10.0s
+2026-02-17 23:07:41,638 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:07:43,787 [WARNING] [VISUAL] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-17 23:07:53,792 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 50.5s…
+2026-02-17 23:08:46,157 [WARNING] [VISUAL] Rate-limit hit on attempt 2. Back-off 20s before retry…
+2026-02-17 23:09:06,161 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 40.5s…
+2026-02-17 23:09:49,390 [WARNING] [VISUAL] Rate-limit hit on attempt 3. Back-off 40s before retry…
+2026-02-17 23:10:29,396 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 20.5s…
+2026-02-17 23:10:52,071 [WARNING] [VISUAL] Rate-limit hit on attempt 4. Back-off 80s before retry…
+2026-02-17 23:12:14,400 [WARNING] [VISUAL] Rate-limit hit on attempt 5. Back-off 160s before retry…
+2026-02-17 23:14:54,407 [ERROR] [VISUAL] Returning UNCERTAIN after exhausted retries. Last error: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 45.597686795s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 45
+}
+]
+2026-02-17 23:14:54,416 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=0)
+2026-02-17 23:14:54,417 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:14:56,864 [WARNING] [SEMANTIC] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-17 23:15:06,868 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 50.5s…
+2026-02-17 23:22:38,988 [INFO] Found 10 images in data/real
+2026-02-17 23:22:38,988 [INFO] Found 10 images in data/fake
+2026-02-17 23:22:38,988 [INFO] Total images discovered: 20
+2026-02-17 23:22:38,988 [INFO] Processing limited to first 1 images.
+2026-02-17 23:22:38,988 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-17 23:22:38,988 [INFO] Rate limiter: 8 RPM max · 10.0s min gap · 5 retries · base back-off 10.0s
+2026-02-17 23:22:39,011 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:22:44,658 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-17 23:22:44,659 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:23:01,208 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-17 23:23:01,209 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:23:15,993 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-17 23:23:15,994 [INFO] ✓ X51005361946.png                         GT=FAKE       PRED=REAL       CONF= 79%
+2026-02-17 23:23:15,998 [INFO] JSON results saved → results/predictions.json
+2026-02-17 23:23:15,998 [INFO] CSV results saved  → results/predictions.csv
+2026-02-17 23:26:47,033 [INFO] Found 10 images in data/real
+2026-02-17 23:26:47,033 [INFO] Found 10 images in data/fake
+2026-02-17 23:26:47,033 [INFO] Total images discovered: 20
+2026-02-17 23:26:47,033 [INFO] 
+Starting analysis of 20 receipt(s)…
+============================================================
+2026-02-17 23:26:47,033 [INFO] Rate limiter: 8 RPM max · 10.0s min gap · 5 retries · base back-off 10.0s
+2026-02-17 23:26:47,052 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:26:52,010 [WARNING] [VISUAL] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-17 23:27:02,012 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 50.5s…
+2026-02-17 23:27:57,439 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-17 23:27:57,439 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:28:13,405 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-17 23:28:13,406 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:28:29,255 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-17 23:28:29,255 [INFO] ✓ X51005361946.png                         GT=FAKE       PRED=REAL       CONF= 79%
+2026-02-17 23:28:29,272 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:28:42,664 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=30)
+2026-02-17 23:28:42,665 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:28:56,626 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=60)
+2026-02-17 23:28:56,627 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:29:10,241 [INFO]   [LAYOUT JUDGE] FAKE (confidence=90)
+2026-02-17 23:29:10,242 [INFO] ✓ X51005365179.png                         GT=FAKE       PRED=FAKE       CONF= 50%
+2026-02-17 23:29:10,248 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:29:22,644 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-17 23:29:22,644 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:29:35,502 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-17 23:29:35,503 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:29:48,277 [INFO]   [LAYOUT JUDGE] REAL (confidence=80)
+2026-02-17 23:29:48,278 [INFO] ✓ X51005447850.png                         GT=FAKE       PRED=REAL       CONF= 78%
+2026-02-17 23:29:48,281 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:30:01,465 [INFO]   [VISUAL JUDGE] REAL (confidence=80)
+2026-02-17 23:30:01,465 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:30:15,183 [INFO]   [SEMANTIC JUDGE] REAL (confidence=90)
+2026-02-17 23:30:15,184 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:30:30,183 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-17 23:30:30,184 [INFO] ✓ X51005710963.png                         GT=FAKE       PRED=REAL       CONF=100%
+2026-02-17 23:30:30,189 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:30:43,073 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-17 23:30:43,073 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:30:57,041 [INFO]   [SEMANTIC JUDGE] REAL (confidence=80)
+2026-02-17 23:30:57,042 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:31:10,028 [INFO]   [LAYOUT JUDGE] UNCERTAIN (confidence=60)
+2026-02-17 23:31:10,028 [INFO] ✓ X51005712039.png                         GT=FAKE       PRED=UNCERTAIN  CONF= 58%
+2026-02-17 23:31:10,044 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:31:23,151 [INFO]   [VISUAL JUDGE] REAL (confidence=75)
+2026-02-17 23:31:23,151 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:31:37,478 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-17 23:31:37,479 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:31:50,753 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-17 23:31:50,753 [INFO] ✓ X51006619777.png                         GT=FAKE       PRED=REAL       CONF=100%
+2026-02-17 23:31:50,759 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:32:02,916 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-17 23:32:02,917 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:32:14,659 [WARNING] [SEMANTIC] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-17 23:32:24,665 [WARNING] [RATE LIMITER] RPM window full (11/8 requests in last 60s). Sleeping 13.3s…
+2026-02-17 23:32:37,983 [WARNING] [RATE LIMITER] RPM window full (10/8 requests in last 60s). Sleeping 13.3s…
+2026-02-17 23:32:51,256 [WARNING] [RATE LIMITER] RPM window full (9/8 requests in last 60s). Sleeping 12.2s…
+2026-02-17 23:33:03,419 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 11.7s…
+2026-02-17 23:33:18,006 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=60)
+2026-02-17 23:33:18,007 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:33:30,027 [INFO]   [LAYOUT JUDGE] REAL (confidence=80)
+2026-02-17 23:33:30,028 [INFO] ✓ X51007103668.png                         GT=FAKE       PRED=UNCERTAIN  CONF= 58%
+2026-02-17 23:33:30,035 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:33:43,650 [INFO]   [VISUAL JUDGE] REAL (confidence=75)
+2026-02-17 23:33:43,651 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:33:57,801 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=65)
+2026-02-17 23:33:57,802 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:34:11,138 [WARNING] [LAYOUT] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-17 23:34:21,143 [WARNING] [RATE LIMITER] RPM window full (11/8 requests in last 60s). Sleeping 9.4s…
+2026-02-17 23:34:30,530 [WARNING] [RATE LIMITER] RPM window full (10/8 requests in last 60s). Sleeping 13.6s…
+2026-02-17 23:34:44,151 [WARNING] [RATE LIMITER] RPM window full (9/8 requests in last 60s). Sleeping 14.1s…
+2026-02-17 23:34:58,306 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 13.3s…
+2026-02-17 23:35:14,971 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-17 23:35:14,972 [INFO] ✓ X51007231365.png                         GT=FAKE       PRED=REAL       CONF= 72%
+2026-02-17 23:35:14,978 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:35:27,556 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-17 23:35:27,556 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:35:40,407 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=60)
+2026-02-17 23:35:40,408 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:35:53,187 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-17 23:35:53,188 [INFO] ✓ X51007339151.png                         GT=FAKE       PRED=UNCERTAIN  CONF= 55%
+2026-02-17 23:35:53,191 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:36:05,803 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=30)
+2026-02-17 23:36:05,803 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:36:19,336 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-17 23:36:19,337 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:36:31,964 [INFO]   [LAYOUT JUDGE] UNCERTAIN (confidence=55)
+2026-02-17 23:36:31,965 [INFO] ✓ X51008042780.png                         GT=FAKE       PRED=REAL       CONF= 53%
+2026-02-17 23:36:31,975 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:36:45,651 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-17 23:36:45,651 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:36:59,143 [INFO]   [SEMANTIC JUDGE] REAL (confidence=90)
+2026-02-17 23:36:59,144 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:37:14,483 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-17 23:37:14,484 [INFO] ✓ X51005268472.png                         GT=REAL       PRED=REAL       CONF= 78%
+2026-02-17 23:37:14,486 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:37:26,565 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=30)
+2026-02-17 23:37:26,566 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:37:39,036 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-17 23:37:39,036 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:37:50,933 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-17 23:37:50,934 [INFO] ✓ X51005444045.png                         GT=REAL       PRED=REAL       CONF= 86%
+2026-02-17 23:37:50,937 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:38:03,602 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-17 23:38:03,603 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:38:16,882 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=60)
+2026-02-17 23:38:16,882 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:38:29,285 [INFO]   [LAYOUT JUDGE] UNCERTAIN (confidence=55)
+2026-02-17 23:38:29,286 [INFO] ✓ X51005453804.png                         GT=REAL       PRED=UNCERTAIN  CONF=100%
+2026-02-17 23:38:29,292 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:38:41,829 [INFO]   [VISUAL JUDGE] REAL (confidence=75)
+2026-02-17 23:38:41,829 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:38:54,511 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-17 23:38:54,511 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:39:06,889 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-17 23:39:06,890 [INFO] ✓ X51005605334.png                         GT=REAL       PRED=REAL       CONF=100%
+2026-02-17 23:39:06,894 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:39:19,341 [INFO]   [VISUAL JUDGE] REAL (confidence=75)
+2026-02-17 23:39:19,341 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:39:32,947 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=60)
+2026-02-17 23:39:32,947 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:39:44,523 [WARNING] [LAYOUT] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-17 23:39:54,528 [WARNING] [RATE LIMITER] RPM window full (11/8 requests in last 60s). Sleeping 12.9s…
+2026-02-17 23:40:07,394 [WARNING] [RATE LIMITER] RPM window full (10/8 requests in last 60s). Sleeping 12.4s…
+2026-02-17 23:40:19,847 [WARNING] [RATE LIMITER] RPM window full (9/8 requests in last 60s). Sleeping 13.6s…
+2026-02-17 23:40:33,452 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 11.6s…
+2026-02-17 23:40:47,272 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-17 23:40:47,274 [INFO] ✓ X51005715451.png                         GT=REAL       PRED=REAL       CONF= 73%
+2026-02-17 23:40:47,277 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:41:00,105 [INFO]   [VISUAL JUDGE] REAL (confidence=80)
+2026-02-17 23:41:00,105 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:41:14,315 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-17 23:41:14,316 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:41:26,695 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-17 23:41:26,696 [INFO] ✓ X51005719883.png                         GT=REAL       PRED=REAL       CONF=100%
+2026-02-17 23:41:26,705 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:41:40,098 [INFO]   [VISUAL JUDGE] REAL (confidence=75)
+2026-02-17 23:41:40,098 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:41:55,480 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-17 23:41:55,481 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:42:08,404 [INFO]   [LAYOUT JUDGE] REAL (confidence=85)
+2026-02-17 23:42:08,404 [INFO] ✓ X51005724625.png                         GT=REAL       PRED=REAL       CONF=100%
+2026-02-17 23:42:08,408 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:42:20,753 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-17 23:42:20,753 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:42:34,449 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=60)
+2026-02-17 23:42:34,449 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:42:46,868 [INFO]   [LAYOUT JUDGE] REAL (confidence=80)
+2026-02-17 23:42:46,869 [INFO] ✓ X51006619760.png                         GT=REAL       PRED=UNCERTAIN  CONF= 58%
+2026-02-17 23:42:46,875 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:43:00,068 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-17 23:43:00,068 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:43:13,466 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-17 23:43:13,467 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:43:25,748 [INFO]   [LAYOUT JUDGE] UNCERTAIN (confidence=55)
+2026-02-17 23:43:25,749 [INFO] ✓ X51007231336.png                         GT=REAL       PRED=UNCERTAIN  CONF= 52%
+2026-02-17 23:43:25,754 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-17 23:43:39,342 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-17 23:43:39,342 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-17 23:43:52,651 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-17 23:43:52,651 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-17 23:44:04,587 [WARNING] [LAYOUT] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-17 23:44:14,593 [WARNING] [RATE LIMITER] RPM window full (11/8 requests in last 60s). Sleeping 11.7s…
+2026-02-17 23:44:26,253 [WARNING] [RATE LIMITER] RPM window full (10/8 requests in last 60s). Sleeping 13.6s…
+2026-02-17 23:44:39,847 [WARNING] [RATE LIMITER] RPM window full (9/8 requests in last 60s). Sleeping 13.3s…
+2026-02-17 23:44:53,155 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 11.9s…
+2026-02-17 23:45:08,663 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-17 23:45:08,664 [INFO] ✓ X51007231343.png                         GT=REAL       PRED=REAL       CONF= 79%
+2026-02-17 23:45:08,668 [INFO] JSON results saved → results/predictions.json
+2026-02-17 23:45:08,669 [INFO] CSV results saved  → results/predictions.csv
+2026-02-18 11:59:01,218 [INFO] Found 10 images in data/real
+2026-02-18 11:59:01,218 [INFO] Found 10 images in data/fake
+2026-02-18 11:59:01,218 [INFO] Total images discovered: 20
+2026-02-18 11:59:01,218 [INFO] Processing limited to first 1 images.
+2026-02-18 11:59:01,218 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-18 11:59:01,218 [INFO] Rate limiter: 8 RPM max · 10.0s min gap · 5 retries · base back-off 10.0s
+2026-02-18 11:59:01,246 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 11:59:06,191 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=30)
+2026-02-18 11:59:06,191 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 11:59:22,592 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=60)
+2026-02-18 11:59:22,593 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-18 11:59:37,184 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-18 11:59:37,186 [INFO] ✓ X51005361946.png                         GT=FAKE       PRED=REAL       CONF= 50%
+2026-02-18 11:59:37,189 [INFO] JSON results saved → results/predictions.json
+2026-02-18 11:59:37,190 [INFO] CSV results saved  → results/predictions.csv
+2026-02-18 12:01:11,270 [INFO] Found 10 images in data/real
+2026-02-18 12:01:11,270 [INFO] Found 10 images in data/fake
+2026-02-18 12:01:11,270 [INFO] Total images discovered: 20
+2026-02-18 12:01:11,270 [INFO] Processing limited to first 1 images.
+2026-02-18 12:01:11,270 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-18 12:01:11,270 [INFO] Rate limiter: 12 RPM max · 4.0s min gap · 5 retries · base back-off 10.0s
+2026-02-18 12:01:11,292 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:01:15,844 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-18 12:01:15,844 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:01:23,732 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-18 12:01:23,732 [INFO]   [LAYOUT JUDGE] Running… (temp=0.9)
+2026-02-18 12:01:32,876 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-18 12:01:32,876 [INFO]   [VOTE] REAL=2  FAKE=0  UNCERTAIN=1  →  REAL
+2026-02-18 12:01:32,878 [INFO] ✓ X51005361946.png                         GT=FAKE       PRED=REAL       TALLY=R:2 F:0 U:1
+2026-02-18 12:01:32,880 [INFO] JSON results saved → results/predictions.json
+2026-02-18 12:01:32,880 [INFO] CSV results saved  → results/predictions.csv
+2026-02-18 12:33:55,597 [INFO] Found 10 images in data/real
+2026-02-18 12:33:55,598 [INFO] Found 10 images in data/fake
+2026-02-18 12:33:55,598 [INFO] Total images discovered: 20
+2026-02-18 12:33:55,598 [INFO] 
+Starting analysis of 20 receipt(s)…
+============================================================
+2026-02-18 12:33:55,598 [INFO] Rate limiter: 12 RPM max · 4.0s min gap · 5 retries · base back-off 10.0s
+2026-02-18 12:33:55,623 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:34:00,272 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-18 12:34:00,272 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:34:08,248 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-18 12:34:08,249 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:34:15,955 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-18 12:34:15,956 [INFO]   [VOTE] REAL=2  FAKE=0  UNCERTAIN=1  →  REAL
+2026-02-18 12:34:15,957 [INFO] ✓ X51005361946.png                         GT=FAKE       PRED=REAL       TALLY=R:2 F:0 U:1
+2026-02-18 12:34:15,973 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:34:23,127 [INFO]   [VISUAL JUDGE] FAKE (confidence=90)
+2026-02-18 12:34:23,128 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:34:29,894 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-18 12:34:29,894 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:34:36,448 [INFO]   [LAYOUT JUDGE] FAKE (confidence=90)
+2026-02-18 12:34:36,448 [INFO]   [VOTE] REAL=0  FAKE=3  UNCERTAIN=0  →  FAKE
+2026-02-18 12:34:36,449 [INFO] ✓ X51005365179.png                         GT=FAKE       PRED=FAKE       TALLY=R:0 F:3 U:0
+2026-02-18 12:34:36,454 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:34:43,016 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-18 12:34:43,016 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:34:49,025 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-18 12:34:49,025 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:34:55,116 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-18 12:34:55,116 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-18 12:34:55,117 [INFO] ✓ X51005447850.png                         GT=FAKE       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-18 12:34:55,121 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:34:59,549 [WARNING] [VISUAL] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-18 12:35:09,552 [WARNING] [RATE LIMITER] RPM window full (19/12 requests in last 60s). Sleeping 6.9s…
+2026-02-18 12:35:16,461 [WARNING] [RATE LIMITER] RPM window full (18/12 requests in last 60s). Sleeping 7.2s…
+2026-02-18 12:35:23,630 [WARNING] [RATE LIMITER] RPM window full (17/12 requests in last 60s). Sleeping 6.8s…
+2026-02-18 12:35:30,400 [WARNING] [RATE LIMITER] RPM window full (16/12 requests in last 60s). Sleeping 6.5s…
+2026-02-18 12:35:36,952 [WARNING] [RATE LIMITER] RPM window full (15/12 requests in last 60s). Sleeping 6.6s…
+2026-02-18 12:35:43,519 [WARNING] [RATE LIMITER] RPM window full (14/12 requests in last 60s). Sleeping 6.0s…
+2026-02-18 12:35:49,526 [WARNING] [RATE LIMITER] RPM window full (13/12 requests in last 60s). Sleeping 6.1s…
+2026-02-18 12:35:55,622 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 4.4s…
+2026-02-18 12:36:03,435 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-18 12:36:03,436 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:36:07,894 [WARNING] [SEMANTIC] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-18 12:36:17,898 [WARNING] [RATE LIMITER] RPM window full (13/12 requests in last 60s). Sleeping 46.0s…
+2026-02-18 12:37:04,005 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 4.5s…
+2026-02-18 12:37:10,903 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-18 12:37:10,903 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:37:15,439 [WARNING] [LAYOUT] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-18 12:37:25,442 [WARNING] [RATE LIMITER] RPM window full (13/12 requests in last 60s). Sleeping 46.0s…
+2026-02-18 12:38:11,410 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 4.5s…
+2026-02-18 12:38:17,981 [WARNING] [LAYOUT] Rate-limit hit on attempt 2. Back-off 20s before retry…
+2026-02-18 12:38:37,982 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 40.5s…
+2026-02-18 12:39:20,703 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-18 12:39:20,704 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-18 12:39:20,704 [INFO] ✓ X51005710963.png                         GT=FAKE       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-18 12:39:20,711 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:39:27,454 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-18 12:39:27,454 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:39:33,868 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-18 12:39:33,869 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:39:40,312 [INFO]   [LAYOUT JUDGE] FAKE (confidence=90)
+2026-02-18 12:39:40,312 [INFO]   [VOTE] REAL=0  FAKE=2  UNCERTAIN=1  →  FAKE
+2026-02-18 12:39:40,312 [INFO] ✓ X51005712039.png                         GT=FAKE       PRED=FAKE       TALLY=R:0 F:2 U:1
+2026-02-18 12:39:40,329 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:39:47,496 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-18 12:39:47,496 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:39:54,550 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-18 12:39:54,550 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:40:01,241 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-18 12:40:01,241 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-18 12:40:01,241 [INFO] ✓ X51006619777.png                         GT=FAKE       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-18 12:40:01,252 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:40:07,744 [INFO]   [VISUAL JUDGE] FAKE (confidence=85)
+2026-02-18 12:40:07,745 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:40:14,770 [WARNING] [SEMANTIC] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-18 12:40:24,775 [WARNING] [RATE LIMITER] RPM window full (19/12 requests in last 60s). Sleeping 3.2s…
+2026-02-18 12:40:27,961 [WARNING] [RATE LIMITER] RPM window full (18/12 requests in last 60s). Sleeping 6.4s…
+2026-02-18 12:40:34,375 [WARNING] [RATE LIMITER] RPM window full (17/12 requests in last 60s). Sleeping 6.4s…
+2026-02-18 12:40:40,819 [WARNING] [RATE LIMITER] RPM window full (16/12 requests in last 60s). Sleeping 7.2s…
+2026-02-18 12:40:47,999 [WARNING] [RATE LIMITER] RPM window full (15/12 requests in last 60s). Sleeping 7.1s…
+2026-02-18 12:40:55,054 [WARNING] [RATE LIMITER] RPM window full (14/12 requests in last 60s). Sleeping 6.7s…
+2026-02-18 12:41:01,748 [WARNING] [RATE LIMITER] RPM window full (13/12 requests in last 60s). Sleeping 6.5s…
+2026-02-18 12:41:08,252 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 7.0s…
+2026-02-18 12:41:18,243 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-18 12:41:18,244 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:41:25,175 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-18 12:41:25,175 [INFO]   [VOTE] REAL=1  FAKE=2  UNCERTAIN=0  →  FAKE
+2026-02-18 12:41:25,176 [INFO] ✓ X51007103668.png                         GT=FAKE       PRED=FAKE       TALLY=R:1 F:2 U:0
+2026-02-18 12:41:25,186 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:41:32,308 [WARNING] [VISUAL] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-18 12:41:42,312 [WARNING] [RATE LIMITER] RPM window full (14/12 requests in last 60s). Sleeping 36.4s…
+2026-02-18 12:42:18,749 [WARNING] [RATE LIMITER] RPM window full (13/12 requests in last 60s). Sleeping 6.9s…
+2026-02-18 12:42:25,682 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 7.1s…
+2026-02-18 12:42:35,240 [WARNING] [VISUAL] Rate-limit hit on attempt 2. Back-off 20s before retry…
+2026-02-18 12:42:55,244 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 40.5s…
+2026-02-18 12:43:37,917 [WARNING] [VISUAL] Rate-limit hit on attempt 3. Back-off 40s before retry…
+2026-02-18 12:44:17,923 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 20.5s…
+2026-02-18 12:44:41,157 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-18 12:44:41,158 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:44:48,842 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=60)
+2026-02-18 12:44:48,843 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:44:56,114 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-18 12:44:56,114 [INFO]   [VOTE] REAL=2  FAKE=0  UNCERTAIN=1  →  REAL
+2026-02-18 12:44:56,114 [INFO] ✓ X51007231365.png                         GT=FAKE       PRED=REAL       TALLY=R:2 F:0 U:1
+2026-02-18 12:44:56,125 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:45:02,524 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-18 12:45:02,524 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:45:08,611 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-18 12:45:08,612 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:45:14,531 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-18 12:45:14,531 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-18 12:45:14,532 [INFO] ✓ X51007339151.png                         GT=FAKE       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-18 12:45:14,539 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:45:21,039 [INFO]   [VISUAL JUDGE] REAL (confidence=90)
+2026-02-18 12:45:21,039 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:45:27,353 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-18 12:45:27,354 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:45:33,923 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-18 12:45:33,925 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-18 12:45:33,925 [INFO] ✓ X51008042780.png                         GT=FAKE       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-18 12:45:33,936 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:45:40,045 [WARNING] [VISUAL] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-18 12:45:50,051 [WARNING] [RATE LIMITER] RPM window full (19/12 requests in last 60s). Sleeping 6.6s…
+2026-02-18 12:45:56,621 [WARNING] [RATE LIMITER] RPM window full (18/12 requests in last 60s). Sleeping 6.4s…
+2026-02-18 12:46:03,030 [WARNING] [RATE LIMITER] RPM window full (17/12 requests in last 60s). Sleeping 6.1s…
+2026-02-18 12:46:09,115 [WARNING] [RATE LIMITER] RPM window full (16/12 requests in last 60s). Sleeping 5.9s…
+2026-02-18 12:46:15,034 [WARNING] [RATE LIMITER] RPM window full (15/12 requests in last 60s). Sleeping 6.5s…
+2026-02-18 12:46:21,543 [WARNING] [RATE LIMITER] RPM window full (14/12 requests in last 60s). Sleeping 6.3s…
+2026-02-18 12:46:27,855 [WARNING] [RATE LIMITER] RPM window full (13/12 requests in last 60s). Sleeping 6.6s…
+2026-02-18 12:46:34,430 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 6.1s…
+2026-02-18 12:46:43,785 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-18 12:46:43,785 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:46:51,321 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=60)
+2026-02-18 12:46:51,322 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:46:58,604 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-18 12:46:58,605 [INFO]   [VOTE] REAL=1  FAKE=0  UNCERTAIN=2  →  UNCERTAIN
+2026-02-18 12:46:58,605 [INFO] ✓ X51005268472.png                         GT=REAL       PRED=UNCERTAIN  TALLY=R:1 F:0 U:2
+2026-02-18 12:46:58,609 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:47:04,421 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-18 12:47:04,422 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:47:10,072 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-18 12:47:10,072 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:47:15,767 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-18 12:47:15,769 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-18 12:47:15,770 [INFO] ✓ X51005444045.png                         GT=REAL       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-18 12:47:15,772 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:47:21,841 [INFO]   [VISUAL JUDGE] REAL (confidence=90)
+2026-02-18 12:47:21,842 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:47:27,977 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-18 12:47:27,977 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:47:33,778 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-18 12:47:33,778 [INFO]   [VOTE] REAL=2  FAKE=1  UNCERTAIN=0  →  REAL
+2026-02-18 12:47:33,779 [INFO] ✓ X51005453804.png                         GT=REAL       PRED=REAL       TALLY=R:2 F:1 U:0
+2026-02-18 12:47:33,786 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:47:42,216 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-18 12:47:42,217 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:47:48,348 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-18 12:47:48,349 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:47:54,629 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-18 12:47:54,629 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-18 12:47:54,629 [INFO] ✓ X51005605334.png                         GT=REAL       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-18 12:47:54,634 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:48:00,529 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-18 12:48:00,529 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:48:06,330 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-18 12:48:06,330 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:48:11,993 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-18 12:48:11,994 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-18 12:48:11,994 [INFO] ✓ X51005715451.png                         GT=REAL       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-18 12:48:11,998 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:48:16,432 [WARNING] [VISUAL] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-18 12:48:26,437 [WARNING] [RATE LIMITER] RPM window full (20/12 requests in last 60s). Sleeping 2.0s…
+2026-02-18 12:48:28,485 [WARNING] [RATE LIMITER] RPM window full (19/12 requests in last 60s). Sleeping 5.8s…
+2026-02-18 12:48:34,284 [WARNING] [RATE LIMITER] RPM window full (18/12 requests in last 60s). Sleeping 8.4s…
+2026-02-18 12:48:42,719 [WARNING] [RATE LIMITER] RPM window full (17/12 requests in last 60s). Sleeping 6.1s…
+2026-02-18 12:48:48,852 [WARNING] [RATE LIMITER] RPM window full (16/12 requests in last 60s). Sleeping 6.3s…
+2026-02-18 12:48:55,131 [WARNING] [RATE LIMITER] RPM window full (15/12 requests in last 60s). Sleeping 5.9s…
+2026-02-18 12:49:01,034 [WARNING] [RATE LIMITER] RPM window full (14/12 requests in last 60s). Sleeping 5.8s…
+2026-02-18 12:49:06,837 [WARNING] [RATE LIMITER] RPM window full (13/12 requests in last 60s). Sleeping 5.7s…
+2026-02-18 12:49:12,497 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 4.4s…
+2026-02-18 12:49:17,371 [WARNING] [VISUAL] Rate-limit hit on attempt 2. Back-off 20s before retry…
+2026-02-18 12:49:37,376 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 40.5s…
+2026-02-18 12:50:20,732 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-18 12:50:20,735 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:50:27,429 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-18 12:50:27,429 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:50:33,357 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-18 12:50:33,358 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-18 12:50:33,359 [INFO] ✓ X51005719883.png                         GT=REAL       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-18 12:50:33,365 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:50:39,364 [WARNING] [VISUAL] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-18 12:50:49,370 [WARNING] [RATE LIMITER] RPM window full (15/12 requests in last 60s). Sleeping 31.9s…
+2026-02-18 12:51:21,237 [WARNING] [RATE LIMITER] RPM window full (14/12 requests in last 60s). Sleeping 6.7s…
+2026-02-18 12:51:27,935 [WARNING] [RATE LIMITER] RPM window full (13/12 requests in last 60s). Sleeping 5.9s…
+2026-02-18 12:51:33,863 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 6.0s…
+2026-02-18 12:51:42,475 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-18 12:51:42,475 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:51:48,376 [WARNING] [SEMANTIC] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-18 12:51:58,380 [WARNING] [RATE LIMITER] RPM window full (13/12 requests in last 60s). Sleeping 44.6s…
+2026-02-18 12:52:42,866 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 5.9s…
+2026-02-18 12:52:50,872 [WARNING] [SEMANTIC] Rate-limit hit on attempt 2. Back-off 20s before retry…
+2026-02-18 12:53:10,874 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 40.5s…
+2026-02-18 12:53:55,171 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-18 12:53:55,172 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:54:02,516 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-18 12:54:02,518 [INFO]   [VOTE] REAL=2  FAKE=1  UNCERTAIN=0  →  REAL
+2026-02-18 12:54:02,518 [INFO] ✓ X51005724625.png                         GT=REAL       PRED=REAL       TALLY=R:2 F:1 U:0
+2026-02-18 12:54:02,522 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:54:08,971 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-18 12:54:08,972 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:54:15,037 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-18 12:54:15,038 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:54:20,792 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-18 12:54:20,792 [INFO]   [VOTE] REAL=1  FAKE=1  UNCERTAIN=1  →  UNCERTAIN
+2026-02-18 12:54:20,792 [INFO] ✓ X51006619760.png                         GT=REAL       PRED=UNCERTAIN  TALLY=R:1 F:1 U:1
+2026-02-18 12:54:20,799 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:54:27,131 [INFO]   [VISUAL JUDGE] REAL (confidence=90)
+2026-02-18 12:54:27,131 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:54:33,489 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-18 12:54:33,489 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:54:39,611 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-18 12:54:39,611 [INFO]   [VOTE] REAL=2  FAKE=1  UNCERTAIN=0  →  REAL
+2026-02-18 12:54:39,612 [INFO] ✓ X51007231336.png                         GT=REAL       PRED=REAL       TALLY=R:2 F:1 U:0
+2026-02-18 12:54:39,618 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-18 12:54:46,436 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-18 12:54:46,437 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-18 12:54:52,729 [WARNING] [SEMANTIC] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-18 12:55:02,734 [WARNING] [RATE LIMITER] RPM window full (19/12 requests in last 60s). Sleeping 6.7s…
+2026-02-18 12:55:09,478 [WARNING] [RATE LIMITER] RPM window full (18/12 requests in last 60s). Sleeping 6.1s…
+2026-02-18 12:55:15,539 [WARNING] [RATE LIMITER] RPM window full (17/12 requests in last 60s). Sleeping 5.8s…
+2026-02-18 12:55:21,295 [WARNING] [RATE LIMITER] RPM window full (16/12 requests in last 60s). Sleeping 6.3s…
+2026-02-18 12:55:27,636 [WARNING] [RATE LIMITER] RPM window full (15/12 requests in last 60s). Sleeping 6.4s…
+2026-02-18 12:55:33,993 [WARNING] [RATE LIMITER] RPM window full (14/12 requests in last 60s). Sleeping 6.1s…
+2026-02-18 12:55:40,116 [WARNING] [RATE LIMITER] RPM window full (13/12 requests in last 60s). Sleeping 6.8s…
+2026-02-18 12:55:46,938 [WARNING] [RATE LIMITER] RPM window full (12/12 requests in last 60s). Sleeping 6.3s…
+2026-02-18 12:55:57,696 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=60)
+2026-02-18 12:55:57,696 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-18 12:56:04,526 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-18 12:56:04,528 [INFO]   [VOTE] REAL=2  FAKE=0  UNCERTAIN=1  →  REAL
+2026-02-18 12:56:04,528 [INFO] ✓ X51007231343.png                         GT=REAL       PRED=REAL       TALLY=R:2 F:0 U:1
+2026-02-18 12:56:04,531 [INFO] JSON results saved → results/predictions.json
+2026-02-18 12:56:04,533 [INFO] CSV results saved  → results/predictions.csv
+2026-02-19 00:17:27,753 [INFO] Selected ['X51006557196.png', 'X51007339125.png', 'X51006414717.png', 'X51005442344.png', 'X51006387812.png', 'X51006619564.png', 'X51005685355.png', 'X51006557173.png', 'X51006414532.png', 'X51005361912.png'] real and ['X51009447842.png', 'X51007846321.png', 'X51005663293.png', 'X51005442327.png', 'X51006857660.png', 'X51006556726.png', 'X51005605285.png', 'X51006248253.png', 'X51006828201.png', 'X51007262315.png'] fake receipts.
+2026-02-19 11:48:59,609 [INFO] Selected ['X51006557196.png', 'X51007339125.png', 'X51006414717.png', 'X51005442344.png', 'X51006387812.png', 'X51006619564.png', 'X51005685355.png', 'X51006557173.png', 'X51006414532.png', 'X51005361912.png'] real and ['X51009447842.png', 'X51007846321.png', 'X51005663293.png', 'X51005442327.png', 'X51006857660.png', 'X51006556726.png', 'X51005605285.png', 'X51006248253.png', 'X51006828201.png', 'X51007262315.png'] fake receipts.
+2026-02-19 11:57:52,142 [INFO] Selected ['X51006557196.png', 'X51007339125.png', 'X51006414717.png', 'X51005442344.png', 'X51006387812.png', 'X51006619564.png', 'X51005685355.png', 'X51006557173.png', 'X51006414532.png', 'X51005361912.png'] real and ['X51009447842.png', 'X51007846321.png', 'X51005663293.png', 'X51005442327.png', 'X51006857660.png', 'X51006556726.png', 'X51005605285.png', 'X51006248253.png', 'X51006828201.png', 'X51007262315.png'] fake receipts.
+2026-02-19 11:58:11,381 [INFO] Selected ['X51006557196.png', 'X51007339125.png', 'X51006414717.png', 'X51005442344.png', 'X51006387812.png', 'X51006619564.png', 'X51005685355.png', 'X51006557173.png', 'X51006414532.png', 'X51005361912.png'] real and ['X51009447842.png', 'X51007846321.png', 'X51005663293.png', 'X51005442327.png', 'X51006857660.png', 'X51006556726.png', 'X51005605285.png', 'X51006248253.png', 'X51006828201.png', 'X51007262315.png'] fake receipts.
+2026-02-19 13:27:32,415 [INFO] Dataset 'nikita2998/find-it-again-dataset' downloaded to 'data2' and unzipped.
+2026-02-19 13:39:50,414 [INFO] Dataset 'nikita2998/find-it-again-dataset' downloaded to 'data2' and unzipped.
+2026-02-19 13:39:51,684 [INFO] Selected ['X51006557196.png', 'X51007339125.png', 'X51006414717.png', 'X51005442344.png', 'X51006387812.png', 'X51006619564.png', 'X51005685355.png', 'X51006557173.png', 'X51006414532.png', 'X51005361912.png'] real and ['X51009447842.png', 'X51007846321.png', 'X51005663293.png', 'X51005442327.png', 'X51006857660.png', 'X51006556726.png', 'X51005605285.png', 'X51006248253.png', 'X51006828201.png', 'X51007262315.png'] fake receipts.
+2026-02-19 15:44:03,949 [INFO] Dataset 'nikita2998/find-it-again-dataset' downloaded to 'data2' and unzipped.
+2026-02-19 15:44:05,550 [INFO] Selected ['X51006557196.png', 'X51007339125.png', 'X51006414717.png', 'X51005442344.png', 'X51006387812.png', 'X51006619564.png', 'X51005685355.png', 'X51006557173.png', 'X51006414532.png', 'X51005361912.png'] real and ['X51009447842.png', 'X51007846321.png', 'X51005663293.png', 'X51005442327.png', 'X51006857660.png', 'X51006556726.png', 'X51005605285.png', 'X51006248253.png', 'X51006828201.png', 'X51007262315.png'] fake receipts.
+2026-02-19 15:44:05,571 [INFO] Found 10 images in data2/real
+2026-02-19 15:44:05,571 [INFO] Found 10 images in data2/fake
+2026-02-19 15:44:05,571 [INFO] Total images discovered: 20
+2026-02-19 15:44:05,571 [INFO] Processing limited to first 1 images.
+2026-02-19 15:44:05,571 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-19 15:44:05,571 [INFO] Rate limiter: 8 RPM max · 4.0s min gap · 5 retries · base back-off 10.0s
+2026-02-19 15:44:05,573 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 15:44:07,841 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=30)
+2026-02-19 15:44:07,841 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 15:44:14,274 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=90)
+2026-02-19 15:44:14,275 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 15:44:20,894 [WARNING] [LAYOUT] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-19 15:44:30,900 [WARNING] [RATE LIMITER] RPM window full (10/8 requests in last 60s). Sleeping 37.4s…
+2026-02-19 15:45:08,343 [WARNING] [RATE LIMITER] RPM window full (9/8 requests in last 60s). Sleeping 6.4s…
+2026-02-19 15:45:14,775 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 6.6s…
+2026-02-19 15:45:23,761 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-19 15:45:23,762 [INFO]   [VOTE] REAL=1  FAKE=1  UNCERTAIN=1  →  UNCERTAIN
+2026-02-19 15:45:23,764 [INFO] ✓ X51005442327.png                         GT=FAKE       PRED=UNCERTAIN  TALLY=R:1 F:1 U:1
+2026-02-19 15:45:23,767 [INFO] JSON results saved → results/predictions.json
+2026-02-19 15:45:23,769 [INFO] CSV results saved  → results/predictions.csv
+2026-02-19 15:52:35,641 [INFO] Dataset 'nikita2998/find-it-again-dataset' downloaded to 'data2' and unzipped.
+2026-02-19 15:52:36,991 [INFO] Selected ['X51006557196.png', 'X51007339125.png', 'X51006414717.png', 'X51005442344.png', 'X51006387812.png', 'X51006619564.png', 'X51005685355.png', 'X51006557173.png', 'X51006414532.png', 'X51005361912.png'] real and ['X51009447842.png', 'X51007846321.png', 'X51005663293.png', 'X51005442327.png', 'X51006857660.png', 'X51006556726.png', 'X51005605285.png', 'X51006248253.png', 'X51006828201.png', 'X51007262315.png'] fake receipts.
+2026-02-19 15:52:37,021 [INFO] Found 10 images in data2/real
+2026-02-19 15:52:37,021 [INFO] Found 10 images in data2/fake
+2026-02-19 15:52:37,022 [INFO] Total images discovered: 20
+2026-02-19 15:52:37,022 [INFO] Processing limited to first 1 images.
+2026-02-19 15:52:37,022 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-19 15:52:37,022 [INFO] Rate limiter: 8 RPM max · 4.0s min gap · 5 retries · base back-off 10.0s
+2026-02-19 15:52:37,032 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 15:52:39,078 [WARNING] [VISUAL] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-19 15:52:49,082 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 50.5s…
+2026-02-19 15:53:41,874 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=30)
+2026-02-19 15:53:41,875 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 15:53:47,682 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-19 15:53:47,682 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 15:53:53,223 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-19 15:53:53,224 [INFO]   [VOTE] REAL=1  FAKE=1  UNCERTAIN=1  →  UNCERTAIN
+2026-02-19 15:53:53,224 [INFO] ✓ X51005442327.png                         GT=FAKE       PRED=UNCERTAIN  TALLY=R:1 F:1 U:1
+2026-02-19 15:53:53,228 [INFO] JSON results saved → results/predictions.json
+2026-02-19 15:53:53,229 [INFO] CSV results saved  → results/predictions.csv
+2026-02-19 16:02:13,748 [INFO] Dataset 'nikita2998/find-it-again-dataset' downloaded to 'data' and unzipped.
+2026-02-19 16:02:15,109 [INFO] Selected ['X51006557196.png', 'X51007339125.png', 'X51006414717.png', 'X51005442344.png', 'X51006387812.png', 'X51006619564.png', 'X51005685355.png', 'X51006557173.png', 'X51006414532.png', 'X51005361912.png'] real and ['X51009447842.png', 'X51007846321.png', 'X51005663293.png', 'X51005442327.png', 'X51006857660.png', 'X51006556726.png', 'X51005605285.png', 'X51006248253.png', 'X51006828201.png', 'X51007262315.png'] fake receipts.
+2026-02-19 16:02:15,523 [INFO] Found 10 images in data/real
+2026-02-19 16:02:15,524 [INFO] Found 10 images in data/fake
+2026-02-19 16:02:15,524 [INFO] Total images discovered: 20
+2026-02-19 16:02:15,524 [INFO] Processing limited to first 1 images.
+2026-02-19 16:02:15,524 [INFO] 
+Starting analysis of 1 receipt(s)…
+============================================================
+2026-02-19 16:02:15,524 [INFO] Rate limiter: 8 RPM max · 4.0s min gap · 5 retries · base back-off 10.0s
+2026-02-19 16:02:15,525 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:02:17,913 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=30)
+2026-02-19 16:02:17,913 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:02:23,818 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-19 16:02:23,818 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:02:29,908 [WARNING] [LAYOUT] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-19 16:02:39,909 [WARNING] [RATE LIMITER] RPM window full (10/8 requests in last 60s). Sleeping 38.5s…
+2026-02-19 16:03:18,413 [WARNING] [RATE LIMITER] RPM window full (9/8 requests in last 60s). Sleeping 5.9s…
+2026-02-19 16:03:24,321 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 6.1s…
+2026-02-19 16:03:34,303 [WARNING] [LAYOUT] Rate-limit hit on attempt 2. Back-off 20s before retry…
+2026-02-19 16:03:54,309 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 40.5s…
+2026-02-19 16:04:36,595 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-19 16:04:36,595 [INFO]   [VOTE] REAL=1  FAKE=1  UNCERTAIN=1  →  UNCERTAIN
+2026-02-19 16:04:36,597 [INFO] ✓ X51005442327.png                         GT=FAKE       PRED=UNCERTAIN  TALLY=R:1 F:1 U:1
+2026-02-19 16:04:36,600 [INFO] JSON results saved → results/predictions.json
+2026-02-19 16:04:36,601 [INFO] CSV results saved  → results/predictions.csv
+2026-02-19 16:08:22,438 [INFO] Dataset 'nikita2998/find-it-again-dataset' downloaded to 'data' and unzipped.
+2026-02-19 16:08:23,768 [INFO] Selected ['X51006557196.png', 'X51007339125.png', 'X51006414717.png', 'X51005442344.png', 'X51006387812.png', 'X51006619564.png', 'X51005685355.png', 'X51006557173.png', 'X51006414532.png', 'X51005361912.png'] real and ['X51009447842.png', 'X51007846321.png', 'X51005663293.png', 'X51005442327.png', 'X51006857660.png', 'X51006556726.png', 'X51005605285.png', 'X51006248253.png', 'X51006828201.png', 'X51007262315.png'] fake receipts.
+2026-02-19 16:08:24,051 [INFO] Found 10 images in data/real
+2026-02-19 16:08:24,051 [INFO] Found 10 images in data/fake
+2026-02-19 16:08:24,052 [INFO] Total images discovered: 20
+2026-02-19 16:08:24,052 [INFO] 
+Starting analysis of 20 receipt(s)…
+============================================================
+2026-02-19 16:08:24,052 [INFO] Rate limiter: 8 RPM max · 4.0s min gap · 5 retries · base back-off 10.0s
+2026-02-19 16:08:24,054 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:08:25,737 [WARNING] [VISUAL] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-19 16:08:35,742 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 50.5s…
+2026-02-19 16:09:27,947 [WARNING] [VISUAL] Rate-limit hit on attempt 2. Back-off 20s before retry…
+2026-02-19 16:09:47,951 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 40.5s…
+2026-02-19 16:10:30,450 [WARNING] [VISUAL] Rate-limit hit on attempt 3. Back-off 40s before retry…
+2026-02-19 16:11:10,454 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 20.5s…
+2026-02-19 16:11:33,147 [WARNING] [VISUAL] Rate-limit hit on attempt 4. Back-off 80s before retry…
+2026-02-19 16:12:54,961 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=30)
+2026-02-19 16:12:54,962 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:13:01,826 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=90)
+2026-02-19 16:13:01,827 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:13:08,092 [WARNING] [LAYOUT] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-19 16:13:18,094 [WARNING] [RATE LIMITER] RPM window full (10/8 requests in last 60s). Sleeping 37.4s…
+2026-02-19 16:13:55,465 [WARNING] [RATE LIMITER] RPM window full (9/8 requests in last 60s). Sleeping 6.9s…
+2026-02-19 16:14:02,331 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 6.3s…
+2026-02-19 16:14:10,590 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-19 16:14:10,590 [INFO]   [VOTE] REAL=1  FAKE=1  UNCERTAIN=1  →  UNCERTAIN
+2026-02-19 16:14:10,591 [INFO] ✓ X51005442327.png                         GT=FAKE       PRED=UNCERTAIN  TALLY=R:1 F:1 U:1
+2026-02-19 16:14:10,613 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:14:34,350 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-19 16:14:34,351 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:14:41,614 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-19 16:14:41,614 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:14:49,986 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-19 16:14:49,986 [INFO]   [VOTE] REAL=2  FAKE=1  UNCERTAIN=0  →  REAL
+2026-02-19 16:14:49,986 [INFO] ✓ X51005605285.png                         GT=FAKE       PRED=REAL       TALLY=R:2 F:1 U:0
+2026-02-19 16:14:50,003 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:14:57,447 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-19 16:14:57,448 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:15:05,666 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-19 16:15:05,666 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:15:12,770 [INFO]   [LAYOUT JUDGE] FAKE (confidence=90)
+2026-02-19 16:15:12,770 [INFO]   [VOTE] REAL=0  FAKE=2  UNCERTAIN=1  →  FAKE
+2026-02-19 16:15:12,771 [INFO] ✓ X51005663293.png                         GT=FAKE       PRED=FAKE       TALLY=R:0 F:2 U:1
+2026-02-19 16:15:12,779 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:15:19,141 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-19 16:15:19,141 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:15:25,236 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-19 16:15:25,237 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:15:29,241 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 5.6s…
+2026-02-19 16:15:36,972 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-19 16:15:36,972 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-19 16:15:36,973 [INFO] ✓ X51006248253.png                         GT=FAKE       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-19 16:15:36,978 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:15:40,976 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 1.1s…
+2026-02-19 16:15:45,175 [INFO]   [VISUAL JUDGE] FAKE (confidence=90)
+2026-02-19 16:15:45,176 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:15:49,179 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 1.3s…
+2026-02-19 16:15:53,119 [WARNING] [SEMANTIC] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-19 16:16:03,124 [WARNING] [RATE LIMITER] RPM window full (14/8 requests in last 60s). Sleeping 3.0s…
+2026-02-19 16:16:06,169 [WARNING] [RATE LIMITER] RPM window full (13/8 requests in last 60s). Sleeping 7.1s…
+2026-02-19 16:16:13,275 [WARNING] [RATE LIMITER] RPM window full (12/8 requests in last 60s). Sleeping 6.4s…
+2026-02-19 16:16:19,641 [WARNING] [RATE LIMITER] RPM window full (11/8 requests in last 60s). Sleeping 6.1s…
+2026-02-19 16:16:25,742 [WARNING] [RATE LIMITER] RPM window full (10/8 requests in last 60s). Sleeping 11.7s…
+2026-02-19 16:16:37,477 [WARNING] [RATE LIMITER] RPM window full (9/8 requests in last 60s). Sleeping 8.2s…
+2026-02-19 16:16:45,680 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 7.9s…
+2026-02-19 16:16:55,849 [WARNING] [SEMANTIC] Rate-limit hit on attempt 2. Back-off 20s before retry…
+2026-02-19 16:17:15,855 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 40.5s…
+2026-02-19 16:17:59,693 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-19 16:17:59,694 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:18:06,463 [INFO]   [LAYOUT JUDGE] FAKE (confidence=90)
+2026-02-19 16:18:06,464 [INFO]   [VOTE] REAL=0  FAKE=3  UNCERTAIN=0  →  FAKE
+2026-02-19 16:18:06,464 [INFO] ✓ X51006556726.png                         GT=FAKE       PRED=FAKE       TALLY=R:0 F:3 U:0
+2026-02-19 16:18:06,479 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:18:13,685 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-19 16:18:13,685 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:18:20,094 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-19 16:18:20,095 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:18:26,501 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-19 16:18:26,502 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-19 16:18:26,502 [INFO] ✓ X51006828201.png                         GT=FAKE       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-19 16:18:26,512 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:18:33,826 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-19 16:18:33,826 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:18:41,836 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-19 16:18:41,837 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:18:48,877 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-19 16:18:48,877 [INFO]   [VOTE] REAL=2  FAKE=1  UNCERTAIN=0  →  REAL
+2026-02-19 16:18:48,878 [INFO] ✓ X51006857660.png                         GT=FAKE       PRED=REAL       TALLY=R:2 F:1 U:0
+2026-02-19 16:18:48,886 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:18:52,881 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 7.3s…
+2026-02-19 16:19:04,107 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-19 16:19:04,108 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:19:10,937 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-19 16:19:10,937 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:19:17,369 [INFO]   [LAYOUT JUDGE] FAKE (confidence=95)
+2026-02-19 16:19:17,370 [INFO]   [VOTE] REAL=0  FAKE=2  UNCERTAIN=1  →  FAKE
+2026-02-19 16:19:17,370 [INFO] ✓ X51007262315.png                         GT=FAKE       PRED=FAKE       TALLY=R:0 F:2 U:1
+2026-02-19 16:19:17,380 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:19:24,330 [INFO]   [VISUAL JUDGE] FAKE (confidence=90)
+2026-02-19 16:19:24,331 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:19:30,959 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-19 16:19:30,960 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:19:38,025 [INFO]   [LAYOUT JUDGE] FAKE (confidence=90)
+2026-02-19 16:19:38,029 [INFO]   [VOTE] REAL=0  FAKE=3  UNCERTAIN=0  →  FAKE
+2026-02-19 16:19:38,029 [INFO] ✓ X51007846321.png                         GT=FAKE       PRED=FAKE       TALLY=R:0 F:3 U:0
+2026-02-19 16:19:38,034 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:19:44,238 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-19 16:19:44,239 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:19:48,243 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 1.1s…
+2026-02-19 16:19:51,813 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-19 16:19:51,813 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:19:55,814 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 8.8s…
+2026-02-19 16:20:07,096 [INFO]   [LAYOUT JUDGE] FAKE (confidence=85)
+2026-02-19 16:20:07,096 [INFO]   [VOTE] REAL=1  FAKE=2  UNCERTAIN=0  →  FAKE
+2026-02-19 16:20:07,097 [INFO] ✓ X51009447842.png                         GT=FAKE       PRED=FAKE       TALLY=R:1 F:2 U:0
+2026-02-19 16:20:07,103 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:20:13,777 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-19 16:20:13,778 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:20:20,083 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-19 16:20:20,083 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:20:24,087 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 0.7s…
+2026-02-19 16:20:27,934 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-19 16:20:27,934 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-19 16:20:27,935 [INFO] ✓ X51005361912.png                         GT=REAL       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-19 16:20:27,937 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:20:34,822 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-19 16:20:34,823 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:20:40,844 [WARNING] [SEMANTIC] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-19 16:20:50,849 [WARNING] [RATE LIMITER] RPM window full (14/8 requests in last 60s). Sleeping 1.5s…
+2026-02-19 16:20:52,319 [WARNING] [RATE LIMITER] RPM window full (13/8 requests in last 60s). Sleeping 15.3s…
+2026-02-19 16:21:07,601 [WARNING] [RATE LIMITER] RPM window full (12/8 requests in last 60s). Sleeping 6.7s…
+2026-02-19 16:21:14,282 [WARNING] [RATE LIMITER] RPM window full (11/8 requests in last 60s). Sleeping 6.3s…
+2026-02-19 16:21:20,588 [WARNING] [RATE LIMITER] RPM window full (10/8 requests in last 60s). Sleeping 7.8s…
+2026-02-19 16:21:28,439 [WARNING] [RATE LIMITER] RPM window full (9/8 requests in last 60s). Sleeping 6.9s…
+2026-02-19 16:21:35,326 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 6.0s…
+2026-02-19 16:21:43,209 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-19 16:21:43,209 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:21:49,547 [WARNING] [LAYOUT] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-19 16:21:59,552 [WARNING] [RATE LIMITER] RPM window full (9/8 requests in last 60s). Sleeping 44.2s…
+2026-02-19 16:22:43,714 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 6.3s…
+2026-02-19 16:22:52,144 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-19 16:22:52,145 [INFO]   [VOTE] REAL=2  FAKE=0  UNCERTAIN=1  →  REAL
+2026-02-19 16:22:52,145 [INFO] ✓ X51005442344.png                         GT=REAL       PRED=REAL       TALLY=R:2 F:0 U:1
+2026-02-19 16:22:52,151 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:22:58,583 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-19 16:22:58,584 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:23:04,774 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-19 16:23:04,774 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:23:12,984 [WARNING] [LAYOUT] Rate-limit hit on attempt 1. Back-off 10s before retry…
+2026-02-19 16:23:22,990 [WARNING] [RATE LIMITER] RPM window full (11/8 requests in last 60s). Sleeping 29.7s…
+2026-02-19 16:23:52,646 [WARNING] [RATE LIMITER] RPM window full (10/8 requests in last 60s). Sleeping 6.4s…
+2026-02-19 16:23:59,087 [WARNING] [RATE LIMITER] RPM window full (9/8 requests in last 60s). Sleeping 6.2s…
+2026-02-19 16:24:05,275 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 8.2s…
+2026-02-19 16:24:15,188 [WARNING] [LAYOUT] Rate-limit hit on attempt 2. Back-off 20s before retry…
+2026-02-19 16:24:35,191 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 40.5s…
+2026-02-19 16:25:17,673 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-19 16:25:17,674 [INFO]   [VOTE] REAL=3  FAKE=0  UNCERTAIN=0  →  REAL
+2026-02-19 16:25:17,674 [INFO] ✓ X51005685355.png                         GT=REAL       PRED=REAL       TALLY=R:3 F:0 U:0
+2026-02-19 16:25:17,677 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:25:23,811 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-19 16:25:23,811 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:25:29,720 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-19 16:25:29,721 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:25:35,693 [INFO]   [LAYOUT JUDGE] UNCERTAIN (confidence=55)
+2026-02-19 16:25:35,694 [INFO]   [VOTE] REAL=1  FAKE=0  UNCERTAIN=2  →  UNCERTAIN
+2026-02-19 16:25:35,694 [INFO] ✓ X51006387812.png                         GT=REAL       PRED=UNCERTAIN  TALLY=R:1 F:0 U:2
+2026-02-19 16:25:35,703 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:25:42,535 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-19 16:25:42,535 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:25:48,754 [INFO]   [SEMANTIC JUDGE] REAL (confidence=95)
+2026-02-19 16:25:48,755 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:25:54,981 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-19 16:25:54,981 [INFO]   [VOTE] REAL=2  FAKE=0  UNCERTAIN=1  →  REAL
+2026-02-19 16:25:54,982 [INFO] ✓ X51006414532.png                         GT=REAL       PRED=REAL       TALLY=R:2 F:0 U:1
+2026-02-19 16:25:54,992 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:26:01,516 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-19 16:26:01,517 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:26:05,521 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 12.7s…
+2026-02-19 16:26:21,875 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-19 16:26:21,876 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:26:28,274 [INFO]   [LAYOUT JUDGE] REAL (confidence=95)
+2026-02-19 16:26:28,275 [INFO]   [VOTE] REAL=2  FAKE=1  UNCERTAIN=0  →  REAL
+2026-02-19 16:26:28,275 [INFO] ✓ X51006414717.png                         GT=REAL       PRED=REAL       TALLY=R:2 F:1 U:0
+2026-02-19 16:26:28,283 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:26:34,883 [INFO]   [VISUAL JUDGE] REAL (confidence=95)
+2026-02-19 16:26:34,884 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:26:42,599 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=60)
+2026-02-19 16:26:42,599 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:26:49,387 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-19 16:26:49,387 [INFO]   [VOTE] REAL=2  FAKE=0  UNCERTAIN=1  →  REAL
+2026-02-19 16:26:49,388 [INFO] ✓ X51006557173.png                         GT=REAL       PRED=REAL       TALLY=R:2 F:0 U:1
+2026-02-19 16:26:49,393 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:26:56,034 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-19 16:26:56,034 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:27:03,094 [INFO]   [SEMANTIC JUDGE] UNCERTAIN (confidence=60)
+2026-02-19 16:27:03,095 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:27:09,318 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-19 16:27:09,319 [INFO]   [VOTE] REAL=1  FAKE=0  UNCERTAIN=2  →  UNCERTAIN
+2026-02-19 16:27:09,319 [INFO] ✓ X51006557196.png                         GT=REAL       PRED=UNCERTAIN  TALLY=R:1 F:0 U:2
+2026-02-19 16:27:09,321 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:27:13,323 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 9.1s…
+2026-02-19 16:27:25,397 [INFO]   [VISUAL JUDGE] UNCERTAIN (confidence=50)
+2026-02-19 16:27:25,398 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:27:31,452 [INFO]   [SEMANTIC JUDGE] REAL (confidence=90)
+2026-02-19 16:27:31,452 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:27:37,744 [INFO]   [LAYOUT JUDGE] FAKE (confidence=90)
+2026-02-19 16:27:37,745 [INFO]   [VOTE] REAL=1  FAKE=1  UNCERTAIN=1  →  UNCERTAIN
+2026-02-19 16:27:37,745 [INFO] ✓ X51006619564.png                         GT=REAL       PRED=UNCERTAIN  TALLY=R:1 F:1 U:1
+2026-02-19 16:27:37,755 [INFO]   [VISUAL JUDGE] Running… (temp=0.1)
+2026-02-19 16:27:41,746 [WARNING] [RATE LIMITER] RPM window full (8/8 requests in last 60s). Sleeping 1.4s…
+2026-02-19 16:27:47,346 [INFO]   [VISUAL JUDGE] REAL (confidence=90)
+2026-02-19 16:27:47,346 [INFO]   [SEMANTIC JUDGE] Running… (temp=0.5)
+2026-02-19 16:27:54,394 [INFO]   [SEMANTIC JUDGE] FAKE (confidence=95)
+2026-02-19 16:27:54,394 [INFO]   [LAYOUT JUDGE] Running… (temp=0.8)
+2026-02-19 16:28:00,856 [INFO]   [LAYOUT JUDGE] REAL (confidence=90)
+2026-02-19 16:28:00,857 [INFO]   [VOTE] REAL=2  FAKE=1  UNCERTAIN=0  →  REAL
+2026-02-19 16:28:00,857 [INFO] ✓ X51007339125.png                         GT=REAL       PRED=REAL       TALLY=R:2 F:1 U:0
+2026-02-19 16:28:00,863 [INFO] JSON results saved → results/predictions.json
+2026-02-19 16:28:00,865 [INFO] CSV results saved  → results/predictions.csv
